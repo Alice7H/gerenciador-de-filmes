@@ -27,7 +27,7 @@
       <img
         src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
         alt="Pobres Criaturas Poster"
-        class="w-full aspect-[2/3] max-h-[500px] object-cover rounded-xl shadow-[0_0_20px_rgba(147,51,234,0.3)]"
+        class="w-full aspect-2/3 max-h-[500px] object-cover rounded-xl shadow-[0_0_20px_rgba(147,51,234,0.3)]"
       />
     </div>
 
@@ -39,7 +39,7 @@
           type="button"
           (click)="toggleFavorite()"
           [attr.aria-label]="isFavorite() ? 'Remover dos favoritos' : 'Adicionar aos favoritos'"
-          class="p-2 rounded-full transition-all text-gray-400 hover:text-purple-500 hover:bg-[#2c2c30] flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-purple-600"
+          class="p-2 rounded-full transition-all text-gray-400 hover:text-purple-500 hover:bg-[#2c2c30] shrink-0 focus:outline-none focus:ring-2 focus:ring-purple-600"
         >
           @if (isFavorite()) {
           <svg
