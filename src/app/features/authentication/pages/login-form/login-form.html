@@ -1,4 +1,7 @@
-<!-- Formulário de Login do Usuário -->
+<!-- Email and password Form field signal -->
+@let email = loginForm.email();
+@let password = loginForm.password();
+
 <div class="space-y-8">
   <div>
     <h1 class="text-2xl font-bold text-white">Acesse sua conta</h1>
@@ -10,21 +13,37 @@
     >
       <img src="images/email.svg" class="w-5 h-5 mr-3 opacity-50" />
       <input
+        [field]="loginForm.email"
+        type="email"
         placeholder="E-mail"
         class="bg-transparent outline-none text-white w-full placeholder-gray-500"
       />
     </div>
+    
+    @if(email.touched() && email.invalid()){
+      <p class="text-sm font-bold text-red-400">
+        {{ email.errors()[0].message }}
+      </p>
+    }
 
     <div
       class="flex items-center bg-[#202024] rounded-lg border border-transparent focus-within:border-purple-700 transition px-4 py-3"
     >
       <img src="images/password.svg" class="w-5 h-5 mr-3 opacity-50" />
       <input
+        [field]="loginForm.password"
         placeholder="Senha"
         type="password"
         class="bg-transparent outline-none text-white w-full placeholder-gray-500"
       />
     </div>
+
+    @if(password.touched() && password.invalid()){
+      <p class="text-sm font-bold text-red-400">
+        {{ password.errors()[0].message }}
+      </p>
+    }
+
   </div>
 
   <button
