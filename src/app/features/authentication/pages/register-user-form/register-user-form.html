@@ -93,8 +93,11 @@
   </button>
 
   @if(registerError()){
-    <p class="text-sm font-bold text-red-400">{{registerError() }}</p>
-  }@else {
+    <p class="text-sm font-bold text-red-400">{{ registerError() }}</p>
+  }@else if (successMessage()) {
+    <p class="text-sm font-bold text-green-400">{{ successMessage() }}</p>
+  }
+  @else {
     <p class="text-sm font-bold text-red-400">&nbsp;</p>
   }
 </div>
