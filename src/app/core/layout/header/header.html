@@ -57,7 +57,7 @@
   <div class="flex items-center gap-4">
     <div class="text-sm text-right hidden md:block leading-tight text-white">
       <p>Olá,</p>
-      <strong>Heverys</strong>
+      <strong>{{ userInfosStore.userName() }}</strong>
     </div>
 
     <img
@@ -131,7 +131,7 @@
         <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold"
           >Logado como</span
         >
-        <strong class="text-white text-lg">Heverys</strong>
+        <strong class="text-white text-lg">{{ userInfosStore.userName() }}</strong>
       </div>
     </div>
 
