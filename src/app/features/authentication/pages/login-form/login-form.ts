@@ -1,4 +1,4 @@
-import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { email, form, Field, minLength, required } from '@angular/forms/signals';
 import { UserApi } from '../../../../core/services/user-api';
 import { Router } from '@angular/router';
