@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { UserTokenStore } from '../../services/user-token-store';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { UserInfosStore } from '../../services/user-infos-store';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

@@ -11,8 +11,10 @@
 
   <nav class="hidden md:flex items-center gap-8 h-full" aria-label="Navegação Principal">
     <a
-      class="h-full flex items-center gap-2 text-white font-bold border-b-2 border-purple-600 px-2 transition box-border focus:outline-none focus:text-purple-400 cursor-pointer"
+      class="h-full flex items-center gap-2 text-gray-400 hover:text-white transition px-2 border-b-2 border-transparent hover:border-[#2c2c30] box-border focus:outline-none cursor-pointer"
       aria-current="page"
+      routerLink="/explore"
+      routerLinkActive="!border-purple-400 font-bold text-white"
     >
       <svg
         aria-hidden="true"
@@ -21,6 +23,7 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
+        routerLinkActive="text-purple-400"
       >
         <path
           stroke-linecap="round"
@@ -33,7 +36,9 @@
     </a>
 
     <a
-      class="h-full flex items-center gap-2 text-gray-400 hover:text-white transition px-2 border-b-2 border-transparent hover:border-[#2c2c30] box-border focus:outline-none focus:text-white focus:border-white cursor-pointer"
+      class="h-full flex items-center gap-2 text-gray-400 hover:text-white transition px-2 border-b-2 border-transparent hover:border-[#2c2c30] box-border focus:outline-none cursor-pointer"
+      routerLink="/favorites"
+      routerLinkActive="!border-purple-400 font-bold text-white"
     >
       <svg
         aria-hidden="true"
@@ -42,6 +47,7 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
+        routerLinkActive="text-purple-400"
       >
         <path
           stroke-linecap="round"
@@ -137,16 +143,19 @@
 
     <nav class="flex flex-col gap-2">
       <a
-        class="flex items-center gap-3 px-4 py-3 bg-white/10 rounded-lg text-white font-bold border-l-4 border-purple-500 hover:bg-white/20 transition focus:outline-none focus:ring-2 focus:ring-purple-600 cursor-pointer"
+        class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-purple-600 cursor-pointer"
         aria-current="page"
+        routerLink="/explore"
+        routerLinkActive="bg-white/10 font-bold border-l-4 border-purple-500 hover:bg-white/20 text-white"
       >
         <svg
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-purple-400"
+          class="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          routerLinkActive="text-purple-400"
         >
           <path
             stroke-linecap="round"
@@ -160,6 +169,8 @@
 
       <a
         class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-purple-600 cursor-pointer"
+        routerLink="/favorites"
+        routerLinkActive="bg-white/10 font-bold border-l-4 border-purple-500 hover:bg-white/20 text-white"
       >
         <svg
           aria-hidden="true"
@@ -168,6 +179,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          routerLinkActive="text-purple-400"
         >
           <path
             stroke-linecap="round"
@@ -176,7 +188,7 @@
             d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
           />
         </svg>
-        Meus filmes
+        Meus favoritos
       </a>
 
       <button
