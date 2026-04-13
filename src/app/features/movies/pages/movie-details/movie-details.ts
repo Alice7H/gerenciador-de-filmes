@@ -64,9 +64,25 @@ export class MovieDetails {
     return this.isMovieFavoriteResource.value() ?? false;
   });
 
+  toggleFavoriteParams = signal<boolean | undefined >(undefined);
+
+  toggleMovieFavoriteResource = rxResource({
+    params: () => {
+      const status = this.toggleFavoriteParams();
+      if(status === undefined) return undefined;
+      return { 
+        currentFavoriteStatus: status, 
+        movieId: +this.id(), 
+      }
+    },
+    stream: ({params}) => this._favoritesApi.toggleMovieFavorite(params.currentFavoriteStatus, params.movieId)
+    .pipe(
+      tap(() => this.isFavorite.update((currentValue)=> !currentValue))
+    ),
+  });
+
   toggleFavorite() {
-    this.isFavorite.update((value) => !value);
-    console.log(`Filme agora é favorito: ${this.isFavorite()}`);
+    this.toggleFavoriteParams.set(this.isFavorite());
   }
 
   updateRating(newRating: number){

@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { MoviesListResponse } from "../types/movies-list-response";
 import { IMovieToFavoriteSuccessResponse } from "../models/movie-to-favorite-success-response";
-import { map } from "rxjs";
+import { map, Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +28,15 @@ export class FavoritesApi {
         favoritesListResponse.find((fm) => fm.id === movieId ) ? true : false,
       ),
     );
+  }
+
+  toggleMovieFavorite(isMovieCurrentFavorite: boolean, movieId: number): Observable<void| IMovieToFavoriteSuccessResponse> {
+    const removeMovie = isMovieCurrentFavorite;
+    if(removeMovie){
+      return this.removeMovieFromFavorites(movieId);
+    }else {
+      return this.addMovieToFavorites(movieId);
+    }
   }
 
 }
