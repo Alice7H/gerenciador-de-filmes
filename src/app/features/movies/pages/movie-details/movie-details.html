@@ -66,7 +66,7 @@
 
       <div class="flex items-center gap-2 pt-2" role="group" aria-label="Avaliação do filme">
         <div class="flex space-x-1">
-          @for (star of stars; track $index) {
+          @for (filledStar of startStatusFilled(); track $index) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -74,14 +74,14 @@
             tabindex="0"
             [attr.aria-label]="'Avaliar com ' + ($index + 1) + ' estrelas'"
             [attr.data-rating]="$index + 1"
-            (click)="setRating($event)"
+            (click)="updateRating($index + 1)"
             stroke-width="1.5"
             stroke="currentColor"
             class="w-7 h-7 cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-sm"
-            [class.fill-purple-500]="isStarFilled($index)"
-            [class.text-purple-500]="isStarFilled($index)"
-            [class.fill-none]="!isStarFilled($index)"
-            [class.text-gray-500]="!isStarFilled($index)"
+            [class.fill-purple-500]="filledStar"
+            [class.text-purple-500]="filledStar"
+            [class.fill-none]="!filledStar"
+            [class.text-gray-500]="!filledStar"
           >
             <path
               stroke-linecap="round"
