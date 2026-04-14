@@ -22,4 +22,8 @@ export class MoviesApi {
       rating,
     });
   }
+
+  createMovie(movieData: FormData){
+    return this._httpClient.post<IMovieResponse>('http://localhost:3000/movies', movieData);
+  }
 }
