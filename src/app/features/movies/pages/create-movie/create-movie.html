@@ -59,6 +59,7 @@
             class="w-5 h-5 mr-3 opacity-50 group-focus-within:opacity-100 transition duration-200"
           />
           <input
+            [(ngModel)]="title"
             type="text"
             id="titulo"
             aria-label="Título do filme"
@@ -80,6 +81,7 @@
               class="w-5 h-5 mr-3 opacity-50 group-focus-within:opacity-100 transition duration-200"
             />
             <input
+              [(ngModel)]="year"
               type="number"
               id="ano"
               aria-label="Ano de lançamento"
@@ -100,6 +102,7 @@
               class="w-5 h-5 mr-3 opacity-50 group-focus-within:opacity-100 transition duration-200"
             />
             <input
+              [(ngModel)]="category"
               type="text"
               id="categoria"
               aria-label="Categoria do filme"
@@ -115,6 +118,7 @@
           class="flex items-start bg-[#202024] rounded-lg px-4 py-3 w-full focus-within:ring-2 focus-within:ring-purple-600 transition group"
         >
           <textarea
+            [(ngModel)]="description"
             id="descricao"
             aria-label="Descrição do filme"
             placeholder="Descrição"
