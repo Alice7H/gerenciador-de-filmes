@@ -18,5 +18,15 @@
     "caminhoImagem": "/uploads/image-1765666870177-14156342.jpg",
     "qtdVotos": 188,
     "mediaVotos": 4.8421
+  },
+  {
+    "id": 1776194143185,
+    "titulo": "Breaking Bad",
+    "descricao": "Um professor de química diagnosticado com câncer de pulmão se transforma em fabricante e vendedor de metanfetamina, a fim de garantir o futuro da sua família.",
+    "genero": "Ação",
+    "anoLancamento": 2013,
+    "caminhoImagem": "/uploads/image-1776194143180-400566794.jpg",
+    "qtdVotos": 6,
+    "mediaVotos": 4.8333
   }
 ]
