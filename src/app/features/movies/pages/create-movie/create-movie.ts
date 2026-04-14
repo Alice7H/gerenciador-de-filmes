@@ -3,10 +3,11 @@ import { rxResource } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { MoviesApi } from '../../services/movies-api';
 import { setErrorMessage } from '../../../../shared/utils/set-error-message';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-create-movie',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './create-movie.html',
   styleUrl: './create-movie.css',
 })
@@ -63,7 +64,4 @@ export class CreateMovie {
     this.movieFormData.set(formData);
   }
 
-  cancelar() {
-    console.log('Operação cancelada!');
-  }
 }
