@@ -28,5 +28,15 @@
     "caminhoImagem": "/uploads/image-1776194143180-400566794.jpg",
     "qtdVotos": 6,
     "mediaVotos": 4.8333
+  },
+  {
+    "id": 1776195001470,
+    "titulo": "O Agente Secreto",
+    "descricao": " Marcelo (Wagner Moura), um especialista em tecnologia fugindo de um passado violento, busca refúgio na cidade, mas encontra um ambiente de paranoia, vigilância e corrupção.",
+    "genero": "Thriller político",
+    "anoLancamento": 2025,
+    "caminhoImagem": "/uploads/image-1776195001468-12314240.jpg",
+    "qtdVotos": 0,
+    "mediaVotos": 0
   }
 ]
